@@ -83,6 +83,11 @@ public class User {
     private Integer xpPoints = 0;
     private Integer levelNum = 1;
 
+    @Column(unique = true)
+    private String resetPasswordToken;
+
+    private LocalDateTime resetPasswordTokenExpiry;
+
     public enum Role {
         USER, ADMIN
     }
@@ -192,6 +197,12 @@ public class User {
 
     public Integer getLevelNum() { return levelNum; }
     public void setLevelNum(Integer levelNum) { this.levelNum = levelNum; }
+
+    public String getResetPasswordToken() { return resetPasswordToken; }
+    public void setResetPasswordToken(String resetPasswordToken) { this.resetPasswordToken = resetPasswordToken; }
+
+    public LocalDateTime getResetPasswordTokenExpiry() { return resetPasswordTokenExpiry; }
+    public void setResetPasswordTokenExpiry(LocalDateTime resetPasswordTokenExpiry) { this.resetPasswordTokenExpiry = resetPasswordTokenExpiry; }
 
     // ── Builder ───────────────────────────────────────────────────────────────
     public static Builder builder() { return new Builder(); }

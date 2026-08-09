@@ -1,4 +1,4 @@
-package com.ak.devforge.security.jwt;
+package com.ak.devforge.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

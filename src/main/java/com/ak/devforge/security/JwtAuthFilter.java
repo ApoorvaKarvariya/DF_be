@@ -20,10 +20,10 @@ import java.io.IOException;
 
 public class JwtAuthFilter extends OncePerRequestFilter {
 
-    private final com.ak.devforge.security.jwt.JwtUtils jwtUtils;
+    private final com.ak.devforge.security.JwtUtils jwtUtils;
     private final UserDetailsService userDetailsService;
 
-    public JwtAuthFilter(com.ak.devforge.security.jwt.JwtUtils jwtUtils, UserDetailsService userDetailsService) {
+    public JwtAuthFilter(com.ak.devforge.security.JwtUtils jwtUtils, UserDetailsService userDetailsService) {
         this.jwtUtils = jwtUtils;
         this.userDetailsService = userDetailsService;
     }
